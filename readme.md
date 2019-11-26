@@ -15,25 +15,28 @@ between the two languages!
 
 By the end of this, developers should be able to:
 
-- Review the principles of Object Oriented Programming
+- Explain the principles of Object Oriented Programming (Review)
 - Define a Python Class and instantiate it
 - Describe inheritance in Python
 - Look at Python's "magic methods" aka dunder methods
 
-## Review: Why OOP? (5 min / 0:05)
+## Review: Why OOP?
 
 ### Objects are Intuitive!
 
 Objects help us build programs that model how we tend to think about the world.
 Human minds tend to break down the world into objects: trees, leaves, roads,
-desks, cars, tacos, Britney Spears songs, and so on (all the _things_). Since it
-is our natural mental tendency to understand the world in terms of objects, this
-is very useful for _modelling_ things in the real world in our programs.
+desks, cars, tacos, Britney Spears songs, and so on (all the _things_).
+
+Since it is our natural mental tendency to understand the world in terms of
+objects, this is very useful for _modelling_ things in the real world in our
+programs.
 
 Instead of a bunch of variables and functions (procedural style), we can group
 relevant data and functions into objects, grouping related data and behavior
-together. We think about them as individual, self-contained units. This grouping
-of properties (data) and methods is a kind of **encapsulation**.
+together. We think about them as individual, self-contained units.
+
+This grouping of properties (data) and methods is a kind of **encapsulation**.
 
 ### Objects Manage Complexity
 
@@ -45,12 +48,12 @@ Objects help us organize and think about our programs. If I'm looking at code
 for a Squad object, and I see it has associated _people_, and those people can
 dance when the squad dances, I don't need to think about or see all the code
 related to a person dancing. I can just think at a high level "ok, when a squad
-dances, all it's associated people dance". This is a form of _abstraction_: I
+dances, all it's associated people dance". This is a form of **abstraction**: I
 don't need to think about the details, just what's happening at a high-level.
 
 ### Ensuring Consistency
 
-Another advantage of _encapsulation_ (grouping data and methods into objects) is
+Another advantage of **encapsulation** (grouping data and methods into objects) is
 that these objects can be in control of their data. This usually means ensuring
 consistency of their data.
 
@@ -69,18 +72,16 @@ bugs) in other areas of our programs.
 
 ### Inheritance
 
-Classes can inherit data members and member functions (formal names for
-"properties" and "methods") from other classes, allowing us to extend these
-attributes while maintaining the flexibility to overwrite them as needed.
+Classes can inherit properties and methods from other classes, allowing us to
+extend these attributes while maintaining the flexibility to overwrite them as
+needed.
 
-## Code along
+## I Do: A Simple Python Class
 
-Create a new folder in your `sandbox` called `python-oop`.
+I'm going to create a new directory in my `sandbox` called `python-oop` and
+create an `oop.py` file inside that new directory.
 
-Inside that folder create a file called `oop.py`. We'll use this file for
-writing sample code in this lesson.
-
-## OOP Syntax: JavaScript vs. Python (5 min / 0:10)
+### OOP Syntax: JavaScript vs. Python
 
 In JavaScript, we could write this class:
 
@@ -99,7 +100,7 @@ const me = new User("Ali");
 me.greet();
 ```
 
-Let's have a look at what this might look like in Python:
+In Python, it the same class would look like this:
 
 ```py
 class User:
@@ -140,14 +141,14 @@ that we will set in our `__init__` method. Finally, the `greet` method displays
 a greeting formatted with the `User` instance's name. At the end, we
 **instantiate** a new user with `me = User("Ali")`.
 
-### You do: Create a `BankAccount` class (20 min / 0:30).
+### You Do: Create a `BankAccount` class
 
 > 10 min exercise, 10 min review
 
 Create a folder in your sandbox called `python-oop`. Inside it, create a new
 file called `bank_accounts.py`.
 
-Create a BankAccount class that meets the following criteria:
+Create a `BankAccount` class that meets the following criteria:
 
 - Bank accounts should accept a `type` property - (like "savings" or
   "checking").
@@ -240,7 +241,7 @@ class BankAccount:
 
 </details>
 
-## Inheritance in Python (30 min / 1:00)
+## Inheritance in Python
 
 Inheritance allows us to build new classes out of old classes. It allows us to
 extend functionality defined in a `parent` class and create `children` classes
@@ -349,9 +350,7 @@ Note how we pass in the `phone_number` parameter to `super().__init__()`.
 This gives `phone_number` a value, like setting a variable. Now we're able to
 access `self.phone_number` in the Android class, and it's already been set!
 
-## Break (10 min / 1:10)
-
-## You do: Write Bank Account Classes (40 min / 2:00)
+## You do: Write Bank Account Classes
 
 > 20 min exercise, 20 min review
 
@@ -501,8 +500,6 @@ class OverdraftAccount(BankAccount):
 
 </details>
 
-## Break (10 min / 2:00)
-
 ### What are Dunder Methods (Magic Methods)?
 
 > Dunder is short-hand for *d*ouble *under*score.
@@ -549,7 +546,7 @@ Other useful dunder methods include:
 Such dunder methods exist for **_almost every operator_**!
 [More examples here](https://dbader.org/blog/python-dunder-methods).
 
-### Exercise: Fancy Bank Accounts (feat. Magic Methods) (20 min / 2:20)
+### Exercise: Fancy Bank Accounts (feat. Magic Methods)
 
 > 15 min exercise, 5 min review
 
